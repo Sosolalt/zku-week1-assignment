@@ -58,7 +58,7 @@ template MerkleTree (nInputs) {  // The main template where we collect the initi
         rootComp.leaves[i] <== hashing[i].outs[0]; // to the other template
     }
 
-    merkleRoot <== rootComp.root; // it takes the final root of the tree from the other template
+    merkRoot <== rootComp.root; // it takes the final root of the tree from the other template
 }
 
 component main {public [leaves]} = MerkleTree(4); // In this case, we start with 4 leaves
